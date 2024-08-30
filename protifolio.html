@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="protfolio.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <!... Header Design...!>
+        <header>
+            <a class="logo">PORTFOLIO</a>
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <nav>
+            <ul>
+            <li><a href="#Home" class="active">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            </ul>
+            </nav>
+        </header>
+        <!...Home Section Design...!>
+        <section id="Home">
+        <div class="info">
+        <h3>Hi</h3>
+        <h1>I'm Keerthi</h1>
+         <h3>And I'm a <span id="role"></span></h3>
+        <div class="icons">
+        <a href=""><i class='bx bxl-facebook'></i></a>
+        <a href=""><i class='bx bxl-instagram'></i></a>
+        <a href=""><i class='bx bxl-twitter' ></i></a>
+        <a href=""><i class='bx bxl-linkedin' ></i></a>
+        </div>
+        <a href="#"><button>Download CV</button></a>
+        </div>
+        </section>
+
+        <section id="About">
+            <h1>About</h1>
+            <h2>
+                I am Keerthi, a Computer Science Engineering Undergraduate from Seshadri Rao Gudlavalleru Engineering College. Currently I am in 3rd year. Apart from the academic education, I have a very deep interest in Web Development.
+            </h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmPdSD5y6Otc9TUJwzwhYJVjOltStg5cPq9Q&s" width="400" height="400">
+        </section>
+        <section id="Skills">
+             <h1>My <span>Skills</span></h1>
+             <h2>Technical Skills</h2>
+            <div class="Technical-bars">
+                <div class="bar"><i class='bx bxl-html5'></i><br>
+                <span>HTML</span>
+                <div class="progress-line">
+                   <div class="progress html"></div>
+                 </div>
+            </div>
+            <div class="bar"><i class='bx bxl-python' ></i><br>
+                    <span>Python</span>
+                <div class="progress-line">
+                  <div class="progress python"></div>
+                </div>
+            </div>
+            <div class="bar"><i class='bx bxl-css3' ></i><br>
+                <span>CSS</span>
+               <div class="progress-line ">
+                  <div class="progress css"></div>
+                </div>
+            </div>
+            <div class="bar"><i class='bx bxl-javascript' ></i><br>
+                    <span>JavaScript</span>
+                <div class="progress-line">
+                   <div class="progress javascript"></div>
+                 </div>
+            </div>
+            <div class="bar"><i class='bx bxl-java' ></i><br>
+                    <span>Java</span>
+                <div class="progress-line ">
+                   <div class="progress java"></div>
+                </div>
+            </div>
+            </div>
+        </div>    
+        </section>
+        <section id="Projects">
+            <h1>Projects</h1>
+            <div class="protfolio-container">
+            <div class="cal">
+            <a href=""><img src="C:\Users\keert\Pictures\Screenshots\Screenshot 2024-08-26 175323.png"width="300" height="300"></a>
+            <h4>Caluclator<br>it is designed <br>by using html,css<br> and javascript</h4>
+            </div>
+            <div class="lan">
+            <a href="https://keerthi1722.github.io/Landing-page/"><img src="C:\Users\keert\Pictures\Screenshots\Screenshot 2024-08-26 175450.png" width="300" height="300"></a>
+            <h4>Landing page<br>it is designed<br> by using html,css<br>and javascript</h4>
+            </div>
+            <div class="port">
+                <a href=""><img src="C:\Users\keert\Pictures\Screenshots\Screenshot 2024-08-26 190111.png" width="300" height="300"></a>
+                <h4>Portfolio<br> it is designedby using html,css<br> and javascript</h4>
+            </div>
+            </div>
+        </section>
+        <section id="Contact">
+            <div class="details">
+            <h1>Contact Me</h1>
+            <p>I'd love to hear from you! Please fill out the form below to reach out via email or social media.</p>
+            <form>
+              <label for="name">Name:</label><br>
+              <input type="text" id="name" name="name" placeholder="enter name" required><br><br>
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" name="email" placeholder="enter email" required><br><br>
+              <label for="message">Message:</label><br>
+              <textarea id="message" name="message" placeholder="Any Message" required></textarea><br><br>
+              <input type="submit" value="Send Message" class="submit-button">
+            </form>
+           <div class="contact-details">
+             <p>Email:<a href="mailto:keerthiramesh293@gmail.com">keerthiramesh293@gmail.com</a></p>
+             <p>Follow me:
+                <a href=""  target="_blank">LinkedIn</a>
+                <a href=""  target="_blank">Twitter</a>
+             </p>
+           </div></div>
+        </section>
+        <script>
+            document.getElementById('menu-icon').addEventListener('click', function() {
+              this.classList.toggle('active');
+            const navLinks = document.getElementById('nav-links');
+             if (this.classList.contains('active')) {
+               navLinks.style.display = 'flex';
+            } else {
+              navLinks.style.display = 'none';
+            }
+           });
+            const roles = ["Student","Front end developer","Programmer", "Web Developer"];
+            let roleIndex = 0;
+            const roleElement = document.getElementById('role');
+    
+            function changeRole() {
+                roleElement.textContent = roles[roleIndex];
+                roleIndex = (roleIndex + 1) % roles.length;
+            }
+            setInterval(changeRole, 2000); // Change role every 2 seconds
+        </script>
+    </body>
+</html>
